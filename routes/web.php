@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::post('/addcustom','CustomerController@store');
+
+Route::get('/addcustomer','CustomerController@index');
+
