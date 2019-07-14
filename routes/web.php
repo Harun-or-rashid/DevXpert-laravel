@@ -14,7 +14,10 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::post('/addcustom','CustomerController@store');
 
-Route::get('/addcustomer','CustomerController@index');
+Route::post('/addcustom','CustomerController@store');
+Route::get('/addcustomer','CustomerController@create');
+Route::get('/showdetails','CustomerController@index');
+
+
 

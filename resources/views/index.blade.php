@@ -12,35 +12,7 @@
 </head>
 <body>
 
-<div class="container pt-5">
-    <form action="/addcustom" method="post">
-        @csrf
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="your name like 'Ringku Islam'" name="name">
-            {{$errors->first('name')}}
-        </div>
-
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Status</label>
-            <select name="status" class="form-control" id="exampleFormControlSelect1">
-                <option value="" disabled>Select Customer Status</option>
-                <option value="1">Active</option>
-                <option value="0">Inactive</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <input type="submit" name="submit" class="btn btn-primary" value="Submit">
-        </div>
-
-
-    </form>
-</div>
+@yield('main_section')
 
 
 

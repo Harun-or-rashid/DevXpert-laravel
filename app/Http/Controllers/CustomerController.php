@@ -14,7 +14,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $customers=Customer::all();
+
+        return view('partial.customer',compact('customers'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-return"sdf";
+return view('partial.addcustomer');
     }
 
     /**
