@@ -10,10 +10,10 @@
 
     <title>Hello, world!</title>
 </head>
+
 <body>
 
 @yield('main_section')
-
 
 
 <!-- Optional JavaScript -->

@@ -9,4 +9,9 @@ class Customer extends Model
     protected $table='customers';
    protected $guarded=[];
 
+    public function Company()
+    {
+        return $this->belongsTo(Company::class);
+   }
+
 }

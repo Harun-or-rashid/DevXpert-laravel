@@ -33,6 +33,16 @@
                 <option value="0">Inactive</option>
             </select>
         </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlSelect1"></label>
+            <select name="company" class="form-control" id="">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                
+            </select>
+        </div>
 
         <div class="form-group">
             <input type="submit" name="submit" class="btn btn-primary" value="Submit">
