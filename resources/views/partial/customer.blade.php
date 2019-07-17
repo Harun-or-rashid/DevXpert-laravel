@@ -19,6 +19,12 @@
                             Inactive
                         @endif
                     </td>
+
+                    <td>
+                        @foreach($company as $companies)
+                            {{$companies->name}}
+                            @endforeach
+                    </td>
             </tr>
 
             @endforeach

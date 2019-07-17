@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Customer;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class CustomerController extends Controller
     public function index()
     {
         $customers=Customer::all();
-
-        return view('partial.customer',compact('customers'));
+       $company=Company::all();
+        return view('partial.customer',compact('customers','company'));
     }
 
     /**
@@ -26,7 +27,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-return view('partial.addcustomer');
+        $companies=Company::all();
+return view('partial.addcustomer',compact('companies'));
     }
 
     /**
@@ -42,9 +44,10 @@ return view('partial.addcustomer');
                 'name'=>'required',
                 'email'=>'required',
                 'status'=>'required',
+                'company_id'=>'required',
+
             ]);
 
-       /// dd($request);
 
             Customer::create($data_validate);
 
