@@ -2,7 +2,7 @@
 @section('main_section')
 
     <div class="container pt-5">
-        <form action="/addcustom" method="post">
+        <form action="/contactfrm" method="post">
             @csrf
             <div class="form-group">
                 <label for="exampleFormControlInput1">Name</label>
@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 <label for="">Message</label><br>
-                <textarea name=text" class="form-control col-md-6 text-primary" id="" cols="30" rows="10">
+                <textarea name="text" class="form-control col-md-6 text-primary" id="" cols="30" rows="10">
 
                 </textarea>
             </div>

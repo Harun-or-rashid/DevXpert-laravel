@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ContactForm;
+use App\Mail\ContactFormEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactFormController extends Controller
 {
@@ -24,7 +26,7 @@ class ContactFormController extends Controller
      */
     public function create()
     {
-        //
+        return view('partial.contactform');
     }
 
     /**
@@ -35,7 +37,14 @@ class ContactFormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'text'=>'required',
+        ]);
+
+     Mail::to('ringku.swe@gmail.com')->send(new ContactFormEmail($data));
+     return redirect('contact');
     }
 
     /**

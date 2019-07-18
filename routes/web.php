@@ -20,4 +20,8 @@ Route::get('/addcustomer','CustomerController@create');
 Route::get('/showdetails','CustomerController@index');
 
 
+Route::get('/contact','ContactFormController@create');
+Route::post('/contactfrm','ContactFormController@store');
+
+
 
