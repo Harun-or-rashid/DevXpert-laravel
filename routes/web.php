@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('partial.contactform');
 });
 
 Route::post('/addcustom','CustomerController@store');
