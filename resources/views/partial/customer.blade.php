@@ -5,12 +5,25 @@
 
     <div class="container">
         <table class="table table-bordered table-dark">
-            <tr>@foreach($customers as $customer)
+            <th>SL</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Company</th>
+
+
+
+                <tr>
+                    <?php $i=1; ?>{{--  For maintainig serial of customer list--}}
+
+                @foreach($customers as $customer)
                     <td>
-                        {{$customer->id}}
+
+                        {{$i}}
+
+                      <?php $i++; ?>
                     </td>
                     <td>
-                        {{$customer->name}}
+                        <a href="/customer/{{$customer->id}}">{{$customer->name}}</a>
                     </td>
                     <td>
                         @if($customer->status==1)
@@ -28,6 +41,7 @@
             </tr>
 
             @endforeach
+
         </table>
     </div>
 

@@ -61,9 +61,10 @@ return view('partial.addcustomer',compact('companies'));
      * @param  \App\customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show(customer $customer)
+    public function show($customer)
     {
-        //
+       $customer=Customer::find($customer);
+     return view('partial.customerdetail',compact('customer'));
     }
 
     /**

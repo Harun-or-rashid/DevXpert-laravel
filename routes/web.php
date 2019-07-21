@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::post('/addcustom','CustomerController@store');
 Route::get('/addcustomer','CustomerController@create');
 Route::get('/showdetails','CustomerController@index');
+Route::get('/customer/{customer}','CustomerController@show');
 
 
 Route::get('/contact','ContactFormController@create');
